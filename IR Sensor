@@ -1,0 +1,21 @@
+int c=0;
+void setup() 
+{
+ pinMode(7,INPUT);
+ pinMode(13,OUTPUT);
+ Serial.begin(9600);
+}
+void loop() 
+{
+  Serial.println(digitalRead(7));
+  if(digitalRead(7) == 0)
+  {
+     digitalWrite(13,HIGH);
+     c++;
+  }
+  else
+  {
+     digitalWrite(13,LOW);
+     Serial.println(c);
+  }
+}
